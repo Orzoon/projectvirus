@@ -47,11 +47,11 @@ body {
 
 
 .firstSection {
-    height: 90%;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
     & #map{
-        height: 100vh;
+        height: 100%;
     }
 }
 
