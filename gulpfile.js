@@ -17,7 +17,6 @@ function watch(){
             baseDir: './public'
         }
     })
-    gulp.watch("./js/*.js", jsBabel);
     gulp.watch('./scss/*.scss', cssStyles)
     gulp.watch('./public/index.html').on('change', browserSync.reload)
     gulp.watch('./public/*.js').on('change', browserSync.reload)
