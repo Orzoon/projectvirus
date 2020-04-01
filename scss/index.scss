@@ -247,7 +247,7 @@ body {
         overflow: visible;
         justify-content: left;
         
-        & h3 {
+        & h1 {
             color: #2c3e50;
             font-size: $titleMFontSize;
             font-weight: 800;
@@ -388,7 +388,7 @@ body {
         padding-bottom: 0px;
         & .symptomsIntro{
             margin-top: 60px;
-            & h3 {
+            & h1 {
                 color: #2c3e50;
                 font-size: $titleMFontSize;
                 font-weight: 800;
@@ -459,7 +459,7 @@ body {
         padding-bottom: 50px;
         width: 100%;
         & div.TableIntro{
-            & h3 {
+            & h1 {
                 color: #2c3e50;
                 font-size: $titleMFontSize;
                 font-weight: 800;
@@ -617,7 +617,7 @@ body {
             align-content: center;
             align-content: center;
             justify-content: right;
-            & h3 {
+            & h1 {
                 font-size: 30px;
                 font-weight: 800;
             }
@@ -665,7 +665,7 @@ body {
             padding-left: 20px;
             padding-right: 20px;
             & .symptomsIntro{
-                & h3 {
+                & h1 {
                     font-size: 30px;
                     font-weight: 800;
                     & span {
@@ -695,7 +695,7 @@ body {
             padding-left: 20px;
             padding-right: 20px;
             & div.TableIntro{
-                & h3 {
+                & h1 {
                     font-size: 30px;
                     font-weight: 800;
                 }
