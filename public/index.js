@@ -92,7 +92,7 @@ window.addEventListener("load", function(){
         // getting data
         async function getDataFromAPI(URI, cb){
             try{
-                const dataResponse = await fetch("http://localhost:5000" + URI, {
+                const dataResponse = await fetch(URI, {
                     method: "GET"
                 });
                 if(dataResponse.status !== 200){
