@@ -11,55 +11,55 @@
 }
 
 
-.loader{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    z-index: 99;
+// .loader{
+//     position: fixed;
+//     height: 100vh;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     background: #fff;
+//     z-index: 99;
 
-    & .L_circle_container{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            height: 100px;
-            width: 65px;
-            z-index: 999;
-            overflow: visible;
-        & .L_circle{
-            position: absolute;
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            background: #E31A1C;
-        }
+//     & .L_circle_container{
+//             position: fixed;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%,-50%);
+//             height: 100px;
+//             width: 65px;
+//             z-index: 999;
+//             overflow: visible;
+//         & .L_circle{
+//             position: absolute;
+//             height: 25px;
+//             width: 25px;
+//             border-radius: 50%;
+//             background: #E31A1C;
+//         }
 
-        & .L_circle:nth-child(1){
-            left: 0%;
-            animation: animL 1.4s linear infinite;
-            background: #FD8D3C;
-            background: #E31A1C;
+//         & .L_circle:nth-child(1){
+//             left: 0%;
+//             animation: animL 1.4s linear infinite;
+//             background: #FD8D3C;
+//             background: #E31A1C;
             
-        }
-        & .L_circle:nth-child(2){
-            left: 50%;
-            animation:  animL 1.4s linear infinite;
-            animation-delay: 0.4s;
-            background: #E31A1C;
-            background: #FD8D3C;
-        }
-        & .L_circle:nth-child(3){
-            left: 100%;
-            background: #FED976;
-            animation: animL 1.4s linear infinite;
-            animation-delay: 0.8s;
-        }
+//         }
+//         & .L_circle:nth-child(2){
+//             left: 50%;
+//             animation:  animL 1.4s linear infinite;
+//             animation-delay: 0.4s;
+//             background: #E31A1C;
+//             background: #FD8D3C;
+//         }
+//         & .L_circle:nth-child(3){
+//             left: 100%;
+//             background: #FED976;
+//             animation: animL 1.4s linear infinite;
+//             animation-delay: 0.8s;
+//         }
 
-    }
-}
+//     }
+// }
 
 @keyframes animL{
     0% {
@@ -119,14 +119,69 @@ body {
     width: 0px;
     height: 0pc;
 }
+
+.firstSection{
+    position: relative;
+}
+
+
 .firstSection {
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     overflow: hidden;
     & #map{
         height: 100%;
     }
 }
+
+
+// .loader{
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     z-index: 9999999;
+//     & .L_circle_container{
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%,-50%);
+//         height: 45px;
+//         width: 65px;
+//         z-index: 99999;
+//         overflow: visible;
+
+//         & .L_circle{
+//             position: absolute;
+//             height: 25px;
+//             width: 25px;
+//             border-radius: 50%;
+//             background: #E31A1C;
+//         }
+
+//         & .L_circle:nth-child(1){
+//             left: 0%;
+//             animation: animL 1.4s linear infinite;
+//             background: #FD8D3C;
+//             background: #E31A1C;
+            
+//         }
+//         & .L_circle:nth-child(2){
+//             left: 50%;
+//             animation:  animL 1.4s linear infinite;
+//             animation-delay: 0.4s;
+//             background: #E31A1C;
+//             background: #FD8D3C;
+//         }
+//         & .L_circle:nth-child(3){
+//             left: 100%;
+//             background: #FED976;
+//             animation: animL 1.4s linear infinite;
+//             animation-delay: 0.8s;
+//         }
+//     }
+// }
 
 .secondSection {
     background: #F9F9F9;
@@ -513,6 +568,14 @@ body {
     margin: 0 auto;
     border: 2px solid rgba(236, 232, 232, 0.432) !important;
     border-top: 0px !important;
+}
+
+@keyframes animL {
+    0% {top: 0%; }
+    25% {top: -8%; }
+    50% {top: 0%; }
+    75% {bottom: -8%; }
+    75% {top: 0%; } 
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {

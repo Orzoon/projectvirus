@@ -26,24 +26,24 @@
         body{
             overflow: hidden;
         }
+
         .loader {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  background: #fff;
-  z-index: 99; }
+  z-index: 9999999; }
   .loader .L_circle_container {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    height: 100px;
+    height: 45px;
     width: 65px;
-    z-index: 999;
+    z-index: 99999;
     overflow: visible; }
     .loader .L_circle_container .L_circle {
       position: absolute;
@@ -72,8 +72,7 @@
               animation: animL 1.4s linear infinite;
       -webkit-animation-delay: 0.8s;
               animation-delay: 0.8s; }
-
-@-webkit-keyframes animL {
+        @-webkit-keyframes animL {
   0% {
     top: 0%; }
   25% {
@@ -85,7 +84,7 @@
   75% {
     top: 0%; } }
 
-@keyframes animL {
+        @keyframes animL {
   0% {
     top: 0%; }
   25% {
@@ -96,18 +95,17 @@
     bottom: -8%; }
   75% {
     top: 0%; } }
-
     </style>
 </head>
 <body>
-    <section class ="loader">
-        <div class = "L_circle_container">
-                <div class="L_circle"></div>
-                <div class="L_circle"></div>
-                <div class="L_circle"></div>
-        </div>
-    </section>
     <section class = "firstSection map">
+        <section class ="loader">
+            <div class = "L_circle_container">
+                    <div class="L_circle"></div>
+                    <div class="L_circle"></div>
+                    <div class="L_circle"></div>
+            </div>
+        </section>
         <div id = "map"></div>
     </section>
     <section class = "secondSection content">
