@@ -10,6 +10,75 @@
     font-size: 16px;
 }
 
+
+.loader{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99;
+
+    & .L_circle_container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 100px;
+            width: 65px;
+            z-index: 999;
+            overflow: visible;
+        & .L_circle{
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: #E31A1C;
+        }
+
+        & .L_circle:nth-child(1){
+            left: 0%;
+            animation: animL 1.4s linear infinite;
+            background: #FD8D3C;
+            background: #E31A1C;
+            
+        }
+        & .L_circle:nth-child(2){
+            left: 50%;
+            animation:  animL 1.4s linear infinite;
+            animation-delay: 0.4s;
+            background: #E31A1C;
+            background: #FD8D3C;
+        }
+        & .L_circle:nth-child(3){
+            left: 100%;
+            background: #FED976;
+            animation: animL 1.4s linear infinite;
+            animation-delay: 0.8s;
+        }
+
+    }
+}
+
+@keyframes animL{
+    0% {
+        top: 0%;
+    }
+    25%{
+        top: -8%;
+    }
+    50%{
+        top: 0%;
+    }
+    75%{
+        bottom: -8%;
+    }
+    75%{
+        top: 0%;
+    }
+}
+
 // variables
 $orangeColor: #FE6845;
 $blueColor: #418DFE;
@@ -47,8 +116,8 @@ body {
 
 
 .firstSection {
-    height: 90vh;
     width: 100%;
+    height: 98vh;
     overflow: hidden;
     & #map{
         height: 100%;
@@ -342,7 +411,13 @@ body {
                 }
             }
         }
-
+        & .covidAd{
+            margin-top: 20px;
+            width: 100%;
+            height: 50px !important;
+            border: none;
+            box-shadow: none !important;
+        }
         & .ul_dataTable {
             position: relative;
             display: grid;
@@ -448,6 +523,14 @@ body {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
+    .firstSection {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        & #map{
+            height: 100%;
+        }
+    }
     .sectionWorldTotal{
         width: 100%;
         margin: 90px auto;

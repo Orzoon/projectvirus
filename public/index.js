@@ -1,16 +1,17 @@
 window.addEventListener("load", function(){
         // DOM ELEMENTS
+        const firstSectionElem = document.querySelector(".firstSection");
         const secondSectionElem = document.querySelector(".secondSection");
         const worldTotalContainerElem = document.querySelector(".worldTotalContainer");
         const ul_dataTableElem = document.querySelector(".ul_dataTable");
         const statisticsButtonElem = document.querySelector(".wt_toStatisticsButton");
         const statisticsTableElem = document.querySelector(".tableContainer");
+        const loaderElement = document.querySelector(".loader");
         /*API URL LISTS */
         const latestByCountryNameURI = "/latestStatByCountryName/:countryName";
         const casesByCountryURI = "/casesByCountry";
         const affectedCountryURI = "/affectedCountry";
-        const worldTotalURI = "/worldTotalStat";
-
+        const worldTotalURI = "/worldTotalStat"
         // EventListners attachement
         statisticsButtonElem.addEventListener("click", function(e){
             e.preventDefault();
@@ -21,6 +22,7 @@ window.addEventListener("load", function(){
         // nextFileUsageVariables
         let casesByCountryData;
         let jsonCountriesData;
+        let loaded;
         // helperVariables
         // init
         (function init(){
@@ -90,7 +92,9 @@ window.addEventListener("load", function(){
         // getting data
         async function getDataFromAPI(URI, cb){
             try{
-                const dataResponse = await fetch(URI);
+                const dataResponse = await fetch("http://localhost:5000" + URI, {
+                    method: "GET"
+                });
                 if(dataResponse.status !== 200){
                     throw new Error("something went wrong");
                 }

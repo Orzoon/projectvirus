@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162457962-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-162457962-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>virusInfo</title>
@@ -14,8 +22,91 @@
     <link rel="stylesheet" href="./stylesheets/leaflet.css">
     <script src = "index.js"></script>
     <script src = "leaflet.js"></script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .loader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 99; }
+  .loader .L_circle_container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 100px;
+    width: 65px;
+    z-index: 999;
+    overflow: visible; }
+    .loader .L_circle_container .L_circle {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: #E31A1C; }
+    .loader .L_circle_container .L_circle:nth-child(1) {
+      left: 0%;
+      -webkit-animation: animL 1.4s linear infinite;
+              animation: animL 1.4s linear infinite;
+      background: #FD8D3C;
+      background: #E31A1C; }
+    .loader .L_circle_container .L_circle:nth-child(2) {
+      left: 50%;
+      -webkit-animation: animL 1.4s linear infinite;
+              animation: animL 1.4s linear infinite;
+      -webkit-animation-delay: 0.4s;
+              animation-delay: 0.4s;
+      background: #E31A1C;
+      background: #FD8D3C; }
+    .loader .L_circle_container .L_circle:nth-child(3) {
+      left: 100%;
+      background: #FED976;
+      -webkit-animation: animL 1.4s linear infinite;
+              animation: animL 1.4s linear infinite;
+      -webkit-animation-delay: 0.8s;
+              animation-delay: 0.8s; }
+
+@-webkit-keyframes animL {
+  0% {
+    top: 0%; }
+  25% {
+    top: -8%; }
+  50% {
+    top: 0%; }
+  75% {
+    bottom: -8%; }
+  75% {
+    top: 0%; } }
+
+@keyframes animL {
+  0% {
+    top: 0%; }
+  25% {
+    top: -8%; }
+  50% {
+    top: 0%; }
+  75% {
+    bottom: -8%; }
+  75% {
+    top: 0%; } }
+
+    </style>
 </head>
 <body>
+    <section class ="loader">
+        <div class = "L_circle_container">
+                <div class="L_circle"></div>
+                <div class="L_circle"></div>
+                <div class="L_circle"></div>
+        </div>
+    </section>
     <section class = "firstSection map">
         <div id = "map"></div>
     </section>
@@ -73,6 +164,18 @@
                 <div class = "TableIntro">
                     <h3><span>COVID-19</span> Statistics</h3>
                 </div>
+                <div class = "covidAd">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-6052567256362171"
+                            data-ad-slot="9940548281"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
                 <ul class = "ul_dataTable">
                     <li class = "ul_dataTableList ul_dataTableListHeading">
                         <h4 class = "ul_DT_country li_heading">Country</h4>
@@ -87,16 +190,5 @@
             </div>
         </section>
     </section>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- myCVDAD -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-6052567256362171"
-            data-ad-slot="8780381993"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </body>
 </html>
