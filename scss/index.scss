@@ -114,7 +114,11 @@ body {
         }
 }
 
-
+.removeLoader{
+    display: none;
+    width: 0px;
+    height: 0pc;
+}
 .firstSection {
     width: 100%;
     height: 98vh;

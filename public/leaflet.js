@@ -393,7 +393,8 @@ function leafletMap(countryJsonData){
                 };
                 legend.addTo(myMap);
                 if(countryJsonData.features.length > 0){
-                    document.querySelector(".loader").style.display = "none";
+                    const loader =  document.querySelector(".loader");
+                    loader.classList.add("removeLoader");
                     document.getElementsByTagName("body")[0].style.overflow = "visible";
                 }
 }
